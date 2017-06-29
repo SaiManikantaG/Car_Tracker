@@ -23,7 +23,7 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-    /*------------------------------------------- Storing data into Vehicle tables -----------------------------------------------------------*/
+    /*------------------------------------------- Storing data into Vehicle tables ------------------------------------*/
     public List<Vehicle> displayAll() {
 
         TypedQuery<Vehicle> query = entityManager.createNamedQuery("Vehicle.displayAll", Vehicle.class);
@@ -52,7 +52,8 @@ public class VehicleRepositoryImpl implements VehicleRepository {
         entityManager.remove(vh);
 
     }
-    /*-------------------- Storing data into reading tables along with alerts table ----------------------------*/
+
+   /*-------------------- Storing data into reading tables along with alerts table ----------------------------*/
 
     public List<Readings> displayAllReadings() {
 
@@ -66,11 +67,29 @@ public class VehicleRepositoryImpl implements VehicleRepository {
 
     public Readings createReadings(Readings readings) {
 
+ // Checking for Alerts and creating alerts
+        createAlerts(readings);
 
-  // Implementation of alerts and persisting data into alerts table here
+        entityManager.persist(readings);
+        return readings;
 
+    }
+
+    public Readings updateReadings(Readings readings) {
+        return entityManager.merge(readings);
+
+    }
+
+    public void deleteReadings(Readings readings) {
+        entityManager.remove(readings);
+
+    }
+
+    // *-------------  Creating Alerts and Storing them in Alerts table in createAlerts method  -------------*
+
+    public Alerts createAlerts(Readings readings){
         Tires tires = readings.getTires();
-
+        Alerts alerts = new Alerts();
         float engineRpm = readings.getEngineRpm();
         Vehicle vehicle = entityManager.find(Vehicle.class,readings.getVin());
         float redlineRpm = vehicle.getRedlineRpm();
@@ -117,23 +136,11 @@ public class VehicleRepositoryImpl implements VehicleRepository {
             alert.setType("Engine Coolant or Engine Light");
             alert.setVin(readings.getVin());
             alert.setTimestamp(readings.getTimestamp());
-            
-// storing alerts data into table
+
             entityManager.persist(alert);
         }
-// storing readings data into table
-        entityManager.persist(readings);
-        return readings;
 
-    }
-
-    public Readings updateReadings(Readings readings) {
-        return entityManager.merge(readings);
-
-    }
-
-    public void deleteReadings(Readings readings) {
-        entityManager.remove(readings);
+        return alerts;
 
     }
 

@@ -91,8 +91,10 @@ public class VehicleController {
 //Create reading for the POST request
     @RequestMapping(value = "/readings", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public void createReadings(@RequestBody Readings Readings){
+    public Readings createReadings(@RequestBody Readings Readings)
+    {
             service.createReadings(Readings);
+            return Readings;
     }
 
 //Update reading if already existing reading

@@ -84,7 +84,7 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Transactional
-    public void createReadings(Readings readings) {
+    public Readings createReadings(Readings readings) {
         if (readings != null) {
             Vehicle existing = repository.displayOne(readings.getId());
             if (existing != null) {
@@ -103,6 +103,7 @@ public class VehicleServiceImpl implements VehicleService {
             repository.createReadings(readings);
 
         }
+        return readings;
     }
 
     @Transactional

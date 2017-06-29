@@ -11,7 +11,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @ComponentScan
 public class Application extends WebMvcConfigurerAdapter {
 
-    // CORS Implementation
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("api/**/*")

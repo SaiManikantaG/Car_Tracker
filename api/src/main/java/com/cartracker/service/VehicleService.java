@@ -26,9 +26,13 @@ public interface VehicleService {
 
     Readings displayOneReadings(String id);
 
-    void createReadings(Readings readings);
+    Readings createReadings(Readings readings);
 
     Readings updateReadings(String id, Readings readings);
 
     void deleteReadings(String id);
+
+    //Alerts checkAlerts(Readings readings, Vehicle vehicle, Alerts alerts);
+
+//    List<Alerts> createAlert(Readings readings);
 }

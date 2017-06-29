@@ -1,5 +1,7 @@
 package com.cartracker.entity;
 
+import com.cartracker.repository.VehicleRepository;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -12,15 +14,16 @@ import java.util.UUID;
         @NamedQuery(name = "Readings.displayById", query = "select rs from Readings rs where id=:paramId")
 
 })
+//@Column(columnDefinition = "VARCHAR(36)")
 
 @Entity
-public class Readings {
+public class Readings{
     @Id
     @Column(columnDefinition = "VARCHAR(36)")
     private String id;
     private String vin;
     private float latitude;
-    private float longitute;
+    private float longitude;
     private Timestamp timestamp;
     private double fuelVolume;
     private double speed;
@@ -30,7 +33,6 @@ public class Readings {
     private boolean cruiseControlOn;
     private int engineRpm;
 
-//Automatically generating ID for Readings table
     public Readings() {
         this.id = UUID.randomUUID()
                 .toString();
@@ -71,12 +73,12 @@ public class Readings {
         this.latitude = latitude;
     }
 
-    public float getLongitute() {
-        return longitute;
+    public float getLongitude() {
+        return longitude;
     }
 
-    public void setLongitute(float longitute) {
-        this.longitute = longitute;
+    public void setLongitude(float longitude) {
+        this.longitude = longitude;
     }
 
     public Timestamp getTimestamp() {
@@ -149,7 +151,7 @@ public class Readings {
                 "id='" + id + '\'' +
                 ", vin='" + vin + '\'' +
                 ", latitude=" + latitude +
-                ", longitute=" + longitute +
+                ", longitude=" + longitude +
                 ", timestamp=" + timestamp +
                 ", fuelVolume=" + fuelVolume +
                 ", speed=" + speed +

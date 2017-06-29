@@ -28,8 +28,6 @@ public class Vehicle {
     private int maxFuelVolume;
     private Timestamp lastServiceDate;
 
-
-// APplying One to Many relation of vehicle class with reading class
     @OneToMany
     private List<Readings> readings;
 

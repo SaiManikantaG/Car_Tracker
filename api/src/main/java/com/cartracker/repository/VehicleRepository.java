@@ -1,5 +1,6 @@
 package com.cartracker.repository;
 
+import com.cartracker.entity.Alerts;
 import com.cartracker.entity.Readings;
 import com.cartracker.entity.Vehicle;
 
@@ -13,8 +14,6 @@ import java.util.List;
 
 public interface VehicleRepository {
 
-// Methods to store details of vehicle
-
     List<Vehicle> displayAll();
 
     Vehicle displayOne(String vin);
@@ -25,8 +24,6 @@ public interface VehicleRepository {
 
     void delete(Vehicle vh);
 
-// methods to store details of reading tables along with alert tables generated with reading inputs
-
     List<Readings> displayAllReadings();
 
     Readings displayOneReadings(String id);
@@ -36,5 +33,7 @@ public interface VehicleRepository {
     Readings updateReadings(Readings readings);
 
     void deleteReadings(Readings readings);
+
+    Alerts createAlerts(Readings readings);
 
 }
