@@ -23,7 +23,7 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-
+    /*------------------------------------------- Storing data into Vehicle tables -----------------------------------------------------------*/
     public List<Vehicle> displayAll() {
 
         TypedQuery<Vehicle> query = entityManager.createNamedQuery("Vehicle.displayAll", Vehicle.class);
@@ -52,6 +52,7 @@ public class VehicleRepositoryImpl implements VehicleRepository {
         entityManager.remove(vh);
 
     }
+    /*-------------------- Storing data into reading tables along with alerts table ----------------------------*/
 
     public List<Readings> displayAllReadings() {
 
@@ -64,8 +65,9 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     }
 
     public Readings createReadings(Readings readings) {
-       /* entityManager.persist(readings);
-        return readings;*/
+
+
+  // Implementation of alerts and persisting data into alerts table here
 
         Tires tires = readings.getTires();
 
@@ -115,10 +117,11 @@ public class VehicleRepositoryImpl implements VehicleRepository {
             alert.setType("Engine Coolant or Engine Light");
             alert.setVin(readings.getVin());
             alert.setTimestamp(readings.getTimestamp());
-
+            
+// storing alerts data into table
             entityManager.persist(alert);
         }
-
+// storing readings data into table
         entityManager.persist(readings);
         return readings;
 

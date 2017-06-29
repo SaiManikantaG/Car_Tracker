@@ -12,7 +12,6 @@ import java.util.UUID;
         @NamedQuery(name = "Readings.displayById", query = "select rs from Readings rs where id=:paramId")
 
 })
-//@Column(columnDefinition = "VARCHAR(36)")
 
 @Entity
 public class Readings {
@@ -31,6 +30,7 @@ public class Readings {
     private boolean cruiseControlOn;
     private int engineRpm;
 
+//Automatically generating ID for Readings table
     public Readings() {
         this.id = UUID.randomUUID()
                 .toString();

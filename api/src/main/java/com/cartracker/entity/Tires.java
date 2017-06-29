@@ -7,6 +7,8 @@ import javax.persistence.Embeddable;
  */
 
 
+//Embedding tires with readings table using annotation
+
 @Embeddable
 public class Tires {
 

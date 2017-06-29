@@ -13,6 +13,8 @@ import java.util.List;
 
 public interface VehicleRepository {
 
+// Methods to store details of vehicle
+
     List<Vehicle> displayAll();
 
     Vehicle displayOne(String vin);
@@ -22,6 +24,8 @@ public interface VehicleRepository {
     Vehicle update(Vehicle vh);
 
     void delete(Vehicle vh);
+
+// methods to store details of reading tables along with alert tables generated with reading inputs
 
     List<Readings> displayAllReadings();
 
