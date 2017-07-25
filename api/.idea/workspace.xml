@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f2668a-f1f9-4aac-9d9f-8740daea4426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0.war" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/JPAConfig.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/JPAConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/controller/VehicleController.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/controller/VehicleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/entity/Alerts.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/entity/Alerts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/entity/Readings.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/entity/Readings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/repository/VehicleRepository.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/repository/VehicleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/repository/VehicleRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/repository/VehicleRepositoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/service/VehicleService.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/service/VehicleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/service/VehicleServiceImpl.class" afterPath="$PROJECT_DIR$/target/Car_Tracker-1.0.0/WEB-INF/classes/com/cartracker/service/VehicleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/JPAConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/JPAConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/controller/VehicleController.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/controller/VehicleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/entity/Alerts.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/entity/Alerts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/entity/Readings.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/entity/Readings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/repository/VehicleRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/repository/VehicleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/repository/VehicleRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/repository/VehicleRepositoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/service/VehicleService.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/service/VehicleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartracker/service/VehicleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cartracker/service/VehicleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/JPAConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/JPAConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/controller/VehicleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/controller/VehicleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/entity/Alerts.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/entity/Alerts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/entity/Readings.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/entity/Readings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/repository/VehicleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/repository/VehicleRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/repository/VehicleRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/repository/VehicleRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/service/VehicleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/service/VehicleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cartracker/service/VehicleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cartracker/service/VehicleServiceImpl.java" />
-    </list>
+    <list default="true" id="47f2668a-f1f9-4aac-9d9f-8740daea4426" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -834,12 +807,12 @@
       <updated>1498721714547</updated>
       <workItem from="1498721716092" duration="495000" />
       <workItem from="1500802115265" duration="11652000" />
-      <workItem from="1500970956667" duration="1084000" />
+      <workItem from="1500970956667" duration="1208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13231000" />
+    <option name="totallyTimeSpent" value="13355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
