@@ -1,0 +1,26 @@
+<div ng-controller="VehicleController as vehicleVm">
+
+<!--
+    <input type="text" ng-model="test" ng-change="testmethod()"/>{{test}}
+-->
+    <table>
+        <thead>
+        <tr>
+            <th>Vin</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="vehicle in vehicleVm.vehicles">
+            <td>{{vehicle.vin}}</td>
+            <td>{{vehicle.make}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.year}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

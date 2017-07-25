@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="carTracker">
+<head>
+    <meta charset="UTF-8">
+    <title>Car-Tracker</title>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+<a href="#!/vehicles">Vehicles</a>
+<a href="#!/readings">Readings</a>
+<a href="#!/alerts">Alerts</a>
+<a href="#!/historyplots">History Plots</a>
+
+
+<br>
+<br>
+<br>
+
+<div ng-view></div>
+
+<script src="app.js"></script>
+<script src="vehicles/vehicle_controller.js"></script>
+<script src="vehicles/vehicle_service.js"></script>
+<script src="readings/readings_controller.js"></script>
+<script src="readings/readings_service.js"></script>
+<script src="alerts/alerts_controller.js"></script>
+<script src="alerts/alerts_service.js"></script>
+<script src="history_plots/historyplot_controller.js"></script>
+<script src="history_plots/historyplot_service.js"></script>
+
+</body>
+</html>

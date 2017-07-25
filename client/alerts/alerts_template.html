@@ -1,0 +1,26 @@
+<div ng-controller="AlertsController as alertsVm">
+
+    <table>
+        <thead>
+        <tr>
+            <th>alertId</th>
+            <th>priority</th>
+            <th>type</th>
+            <th>vin</th>
+            <th>timestamp</th>
+            <!--<th>time</th>-->
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="alerts in alertsVm.alerts">
+            <td>{{alerts.alertId}}</td>
+            <td>{{alerts.priority && 'HIGH' }}</td>
+            <td>{{alerts.type}}</td>
+            <td>{{alerts.vin}}</td>
+            <td>{{alerts.timestamp | date: "yyyy-mm-dd HH:mm:ss"}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
