@@ -4,13 +4,11 @@ import com.cartracker.entity.Alerts;
 import com.cartracker.entity.Readings;
 import com.cartracker.entity.Tires;
 import com.cartracker.entity.Vehicle;
-import com.sun.org.apache.bcel.internal.generic.ALOAD;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,11 +29,11 @@ public class VehicleRepositoryImpl implements VehicleRepository {
 
     }
 
+
     public Vehicle displayOne(String vin) {
         return entityManager.find(Vehicle.class, vin);
 
     }
-
 
     public Vehicle create(Vehicle vh) {
         entityManager.persist(vh);
@@ -64,6 +62,7 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     public Readings displayOneReadings(String id) {
         return entityManager.find(Readings.class, id);
     }
+
 
     public Readings createReadings(Readings readings) {
 
@@ -142,6 +141,24 @@ public class VehicleRepositoryImpl implements VehicleRepository {
 
         return alerts;
 
+    }
+
+    public List<Alerts> displayAllAlerts() {
+
+        TypedQuery<Alerts> query = entityManager.createNamedQuery("Alerts.displayAllAlerts", Alerts.class);
+        return query.getResultList();
+
+
+    }
+
+    public List<Readings> findAll(String vin, String signal) {
+        return entityManager.createQuery("\n" +
+                "select timestamp,"+ signal+" from Readings where vin = \'"+vin+"\'Order BY timestamp").getResultList();
+
+    }
+
+    public List<Object> getLocation(String vin) {
+        return entityManager.createQuery("select latitude,longitude from Readings where vin= \'"+vin+"\' order by timestamp asc").getResultList();
     }
 
 }

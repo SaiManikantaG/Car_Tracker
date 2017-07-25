@@ -11,7 +11,8 @@ import java.util.UUID;
  */
 @NamedQueries({
         @NamedQuery(name = "Readings.displayAllReading", query = "select rs from Readings rs"),
-        @NamedQuery(name = "Readings.displayById", query = "select rs from Readings rs where id=:paramId")
+        @NamedQuery(name = "Readings.displayById", query = "select rs from Readings rs where id=:paramId"),
+        @NamedQuery(name = "Readings.displayByVin", query = "select rs from Readings rs where vin=:paramVin")
 
 })
 //@Column(columnDefinition = "VARCHAR(36)")

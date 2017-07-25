@@ -2,6 +2,8 @@ package com.cartracker.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
@@ -9,6 +11,9 @@ import java.util.UUID;
 /**
  * Created by sai on 6/28/17.
  */
+@NamedQueries({
+        @NamedQuery(name = "Alerts.displayAllAlerts", query = "select al from Alerts al")
+})
 
 @Entity
 public class Alerts {

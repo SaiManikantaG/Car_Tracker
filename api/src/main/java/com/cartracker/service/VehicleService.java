@@ -30,9 +30,11 @@ public interface VehicleService {
 
     Readings updateReadings(String id, Readings readings);
 
+    List<Alerts> displayAllAlerts();
+
     void deleteReadings(String id);
 
-    //Alerts checkAlerts(Readings readings, Vehicle vehicle, Alerts alerts);
+    List<Readings> findAll(String vin, String signal);
 
-//    List<Alerts> createAlert(Readings readings);
+    List<Object> getLocation(String id);
 }

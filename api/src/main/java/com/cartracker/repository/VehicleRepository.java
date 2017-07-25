@@ -4,7 +4,6 @@ import com.cartracker.entity.Alerts;
 import com.cartracker.entity.Readings;
 import com.cartracker.entity.Vehicle;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,5 +34,12 @@ public interface VehicleRepository {
     void deleteReadings(Readings readings);
 
     Alerts createAlerts(Readings readings);
+
+    List<Alerts> displayAllAlerts();
+
+    List<Readings> findAll(String vin, String signal);
+
+    List<Object> getLocation(String vin);
+
 
 }

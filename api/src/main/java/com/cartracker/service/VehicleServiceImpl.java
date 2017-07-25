@@ -32,6 +32,9 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Transactional
+    public List<Alerts> displayAllAlerts(){return repository.displayAllAlerts();}
+
+    @Transactional
     public Vehicle displayOne(String vin) {
         Vehicle existing = repository.displayOne(vin);
         if (existing == null) {
@@ -83,6 +86,7 @@ public class VehicleServiceImpl implements VehicleService {
         return existing;
     }
 
+
     @Transactional
     public Readings createReadings(Readings readings) {
         if (readings != null) {
@@ -122,6 +126,16 @@ public class VehicleServiceImpl implements VehicleService {
             throw new ResourceNotFoundException("Vehicle Readings with id " + id + " doesn't exist.");
         }
         repository.deleteReadings(existingReading);
+    }
+
+    @Transactional
+    public List<Readings> findAll(String vin, String signal) {
+        return repository.findAll(vin,signal);
+    }
+
+    @Transactional
+    public List<Object> getLocation(String id) {
+        return repository.getLocation(id);
     }
 
 }
