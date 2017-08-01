@@ -1,0 +1,8 @@
+<div ng-controller="GeoLocationController as geoLocationVm">
+
+
+    <h1>GeoLocation of a Vehicle</h1>
+
+    <select class="form-control btn-primary" ng-model="vinvalue" ng-change="check()">
+        <option ng-repeat="vehicle in geoLocationVm.vehicles" value={{vehicle.vin}}>{{vehicle.vin}}</option>
+    </select>

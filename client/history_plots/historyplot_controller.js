@@ -5,17 +5,18 @@
     'use strict';
 
     angular.module('carTracker')
-        .controller('HistoryPlotController',HistoryPlotController);
+        .controller('HistoryPlotController', HistoryPlotController);
 
-    HistoryPlotController.$inject =['HistoryPlotService','VehicleService','$scope'];
-    function HistoryPlotController(HistoryPlotService,VehicleService,$scope) {
+    HistoryPlotController.$inject = ['HistoryPlotService', 'VehicleService', '$scope'];
+
+    function HistoryPlotController(HistoryPlotService, VehicleService, $scope) {
         var historyPlotVm = this;
-        historyPlotVm.plotData=[];
+        historyPlotVm.plotData = [];
 
         VehicleService.getVehicles()
             .then(function (response) {
-                historyPlotVm.vehicles = response.data;
-                console.log(response.data);
+                historyPlotVm.vehicles = response;
+                console.log(response);
             }, function (error) {
                 console.log(error);
             });
@@ -23,10 +24,10 @@
         $scope.plot = function () {
             console.log($scope.vin);
             console.log($scope.signal);
-            HistoryPlotService.getHistory($scope.vin,$scope.signal)
+            HistoryPlotService.getHistory($scope.vin, $scope.signal)
                 .then(function (response) {
-                    historyPlotVm.plotData=response.data;
-                    console.log(response.data);
+                    historyPlotVm.plotData = response;
+                    console.log(response);
 
                     $(document).ready(function () {
                             Highcharts.stockChart(document.getElementById("plotContainer"), {
@@ -55,7 +56,8 @@
                         }
                     );
 
-                },function (error) {
+
+                }, function (error) {
                     console.log(error);
                 })
         }

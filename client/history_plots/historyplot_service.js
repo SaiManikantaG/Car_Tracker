@@ -14,7 +14,7 @@
 
         self.getHistory = function (vin,signal) {
 
-            return $http.get("http://localhost:8088/api/readings/"+ vin+ "/"+signal)
+            return $http.get("http://localhost:8080/api/readings/"+ vin+ "/"+signal)
                 .then(function (response) {
                     return response;
                 },function (error) {

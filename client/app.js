@@ -25,6 +25,9 @@
             .when('/historyplots', {
                 templateUrl: "history_plots/historyplot_template.html"
             })
+            .when('/location', {
+                templateUrl: "location/location_template.html"
+            })
             .otherwise({redirectTo: '/vehicles'});
 
     }
